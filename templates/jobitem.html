@@ -1,12 +1,25 @@
-<div class="border-bottom row align-items-center" style="margin-bottom: 16px; padding-bottom: 8px">
-  <div class="col-9">
-    <h4 style= "color: rgb(120,120,120); margin-bottom: 4px;">{{job['title']}}</h4>
-    <div><b>Location:</b> {{job['location']}}</div>
-    {% if 'salary' in job: %}
-      <div><b>Salary:</b> {{job['salary']}}</div>
-    {% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>joboffer</title>
+</head>
+<body>
+
+  <div class="border-bottom row align-items-center" style="margin-bottom: 16px; padding-bottom: 8px">
+    <div class="col-9">
+      <h4 style= "color: rgb(120,120,120); margin-bottom: 4px;">{{job['title']}}</h4>
+      <div><b>Location:</b> {{job['location']}}</div>
+      {% if 'salary' in job: %}
+        <div><b>Salary:</b> {{job['salary']}}</div>
+      {% endif %}
+      </div>
+    <div class="col-3">
+      <a href="/job/{{job['id']}}" type="button" class="btn btn-outline-primary">Apply</a>
     </div>
-  <div class="col-3">
-    <a href="/job/{{job['id']}}" type="button" class="btn btn-outline-primary">Apply</a>
   </div>
-</div>
+  
+</body>
+</html>
